@@ -111,9 +111,6 @@ apt-get install -y sqlite3 libsqlite3-dev
 # Install node.js
 apt-get install -y nodejs
 
-# Configure mysql password lifetime
-echo "default_password_lifetime = 0" >> /etc/mysql/mysql.conf.d/mysqld.cnf
-
 # Add mysql user
 mysql --user="root" --password="${MYSQL_ROOT_PASSWORD}" -e "CREATE USER '${MYSQL_NORMAL_USER}'@'0.0.0.0'IDENTIFIED BY'${MYSQL_NORMAL_USER_PASSWORD}';"
 mysql --user="root" --password="${MYSQL_ROOT_PASSWORD}" -e "GRANT ALL ON *.* TO '${MYSQL_NORMAL_USER}'@'127.0.0.1'IDENTIFIED BY'${MYSQL_NORMAL_USER_PASSWORD}' WITH GRANT OPTION;"
