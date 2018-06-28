@@ -75,7 +75,7 @@ wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 
 # Add source for mysql
-wget -O /tmp/percona.deb https://repo.percona.com/apt/percona-release_0.1-5.$(lsb_release -sc)_all.deb
+wget -O /tmp/percona.deb https://repo.percona.com/apt/percona-release_0.1-6.$(lsb_release -sc)_all.deb
 dpkg -i /tmp/percona.deb
 rm -f /tmp/percona.deb
 
