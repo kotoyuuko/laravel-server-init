@@ -82,9 +82,6 @@ rm -f /tmp/percona.deb
 # Add source for node.js
 curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
-# Update package list
-apt-get update -y
-
 # Set timezone
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
