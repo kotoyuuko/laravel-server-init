@@ -48,8 +48,8 @@ apt-transport-https lsb-release ca-certificates openssl
 
 # Add backports source
 cat >> /etc/apt/sources.list.d/backports.list << EOF
-deb http://deb.debian.org/debian $(lsb_release -sc)-backports main
-deb-src http://deb.debian.org/debian $(lsb_release -sc)-backports main
+deb http://ftp.us.debian.org/debian $(lsb_release -sc)-backports main
+deb-src http://ftp.us.debian.org/debian $(lsb_release -sc)-backports main
 EOF
 apt-get -t stretch-backports update -y && apt-get -t stretch-backports upgrade -y
 
